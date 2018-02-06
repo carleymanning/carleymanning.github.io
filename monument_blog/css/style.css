@@ -6,12 +6,10 @@ Base Styles
 body {
 	font-family: "Raleway", sans-serif;
 	color: #7B98AA;
-	margin-left: 200px;
-	margin-right: 200px;
 }
 /* font and color have been set, margins may be wrong */
 article p {
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 }
 nav a {
 	font-family: "Raleway", sans-serif;
@@ -23,19 +21,21 @@ nav a {
 /* do I need to list a font family since the body is the same font fam? */
 nav {
 	margin: 15px 0 60px 0;
+	text-align: center;
 }
 header {
-	height: 239px;
-	width: 1000px;
-	text-align: center;
-	margin-bottom: 60px;
-	background-image: url("../images/blog_header_bg.jpg");
-	background-size: contain;
-	background-color: #cccccc;
+		max-width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+    background-image: url(../images/blog_header_bg.jpg);
+    background-size: cover;
+    background-color: #cccccc;
+    padding: 90px 0;
+		margin: 0;
 }
-/* Screenshot */
+
 h1 a {
-	color: #44545E;
+	color: #FFFAF0;
 	font-family: "Raleway", sans-serif;
 	font-weight: 600;
 	font-size: 37px;
@@ -57,14 +57,15 @@ article h2 {
 	font-weight: 600;
 	margin-bottom: 40px;
 	text-transform: uppercase;
+	text-align: left;
 }
 article h3 {
-	color: #44545E;
+	color: #7898AA;
 	text-align: left;
 	font-family: "Raleway", sans-serif;
 }
 article p {
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 	font-weight: 400;
 	font-size: 15px;
 	margin: 30px auto;
@@ -82,7 +83,7 @@ aside h3 {
 	text-transform: uppercase;
 	font-size: 18px;
 	font-weight: 600;
-	padding-top: 60px;
+	padding-top: 50px;
 }
 aside h3 img {
 	max-width: 100px;
@@ -100,25 +101,40 @@ aside h3 img {
 footer {
 		text-align: center;
 		background-color: #CDF3F6;
-		padding: 10px;
+		padding: 20px;
 }
 /* Social Media Links */
 footer a {
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #44545E
+	color: #44545E;
 }
 footer p {
 	margin: 10px 0px 0px 0px;
 }
 footer p a {
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
+}
+footer div {
+	text-align: center;
+	padding: 50px 0 50px 0;
+	font-size: 30px;
+}
+footer div a i {
+	margin: 20px;
+}
+i {
+    width: 2.875em;
+}
+footer div {
+    display: inline-block;
+    font-size: 30px;
+    overflow: visible;
+    vertical-align: -.125em;
 }
 #author {
 	text-transform: none;
-}
-.links {
-	padding: 20px;
+	color: #7B98AA;
 }
 hr {
 	border: 1px solid #44545E;
@@ -128,4 +144,25 @@ hr {
 	grid-template-columns: 60% 40%;
 	grid-row-gap: 10px;
 	grid-column-gap: 40px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+/* padding for button to create space inside block
+	margin for spacing them apart */
+input {
+	text-align: center;
+	border-style: none;
+	border-spacing: 20px;
+	font-size: 16px;
+}
+button {
+	background-color: #CDF3F6;
+	border-color: #7B98AA;
+	border-width: thin;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	text-transform: none;
+	color: #708090;
 }
