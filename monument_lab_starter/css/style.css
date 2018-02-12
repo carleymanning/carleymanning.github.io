@@ -1,0 +1,379 @@
+/* when i try to add the google fonts, the * selector turns white? */
+/* Add a link to GOOGLE FONTS LINK at the top! THis should be the first line of your stylesheet.*/
+
+/* ----------------------------------------
+Base Styles
+------------------------------------------- */
+/* Note: Makes sure that padding and the border are included in the width for each element. */
+/* Don't add anything else under the * selector! */
+* {
+	box-sizing: border-box;
+}
+
+/*Note: fix so that images will scale with their containers. We'll chat about this more when we cover responsive design*/
+img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+body {
+	font-family: "Raleway", sans-serif;
+	color: #7B98AA;
+}
+/* Hamburger / Nav */
+.hamburger {
+	background-color: gray;
+	font-size: 27px;
+	padding: 10px 30px;
+  display: none;
+}
+nav {
+	margin: 15px 0 60px 0;
+	text-align: center;
+	background: white;
+	width: 100%;
+	top: 0;
+	position: sticky;
+	z-index: 100;
+}
+nav a {
+	font-family: "Raleway", sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #7B98AA;
+	padding: 75px 20px 20px 75px;
+}
+
+nav a:hover {
+	color: #DCDCDC;
+}
+/* ----------------------------------------
+Header
+------------------------------------------- */
+header {
+	max-width: none;
+  text-align: center;
+	margin-bottom: 60px;
+  background-image: url(../images/home_header_bg.jpg);
+  background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+  background-color: #cccccc;
+  padding: 120px 0;
+}
+/* Try creating a class for this background image. Decide which attributes
+will follow the image and which need to stay with the "header" */
+h1 a {
+	font-weight: 400;
+	font-size: 37px;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 20px;
+	margin: 50px;
+}
+h1 a:hover {
+	color: #DCDCDC;
+}
+h2 {
+	font-weight: 400;
+	font-size: 23px;
+	color: white;
+	text-transform: uppercase;
+}
+/* ----------------------------------------
+Articles
+------------------------------------------- */
+.container {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+	padding-bottom: 30px;
+	text-align: center;
+	/* max-width: 120px;
+	max-height: 120px;
+	width: 120px;
+	height: 120px; */
+}
+/* "Read More" buttons */
+.read_more {
+	display: grid;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+  grid-column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+	/* CSS Validator - Error for line above - not sure what I should have done differently */
+	text-align: center;
+	align-items: center;
+	background-color: white;
+}
+.read_more:hover {
+	transition: opacity 1s;
+  opacity: .25;
+}
+h3 {
+	font-weight: 400;
+	font-size: 23px;
+	color: #7B98AA;
+	text-transform: uppercase;
+	text-align: center;
+}
+div h4 {
+	font-weight: 400;
+	font-size: 16px;
+	color: #7B98AA;
+	text-transform: uppercase;
+	text-align: center;
+}
+div p {
+	text-align: center;
+}
+article {
+	background-color: #CDF3F6;
+	padding-top: 10px;
+}
+section h4 {
+	font-weight: 400;
+	font-size: 18px;
+	color: #7B98AA;
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 20px;
+}
+section h3 {
+	padding-top: 20px;
+}
+article h4 {
+	font-weight: 400;
+	font-size: 18px;
+	color: #7B98AA;
+	text-transform: uppercase;
+	text-align: center;
+}
+article p {
+	text-align: center;
+	display: inline-block;
+	background-color: #CDF3F6;
+	padding: 20px;
+	font-family: "Lato", sans-serif;
+	font-size: 15px;
+	margin: 10px 310px;
+}
+
+/* ----------------------------------------
+About
+------------------------------------------- */
+
+
+/* ----------------------------------------
+Gallery
+------------------------------------------- */
+.imgcontainer {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	grid-template-rows: 50% 50%;
+	/* grid-row-gap: 20px;
+	grid-column-gap: 20px; */
+	margin-left: 100px;
+	margin-right: 100px;
+	padding-bottom: 20px;
+	justify-content: center;
+}
+.col-1-3 {
+	display: inline;
+	grid-row-gap: 10px;
+}
+.col-4-2{
+	display: inline;
+	grid-row-gap: 10px;
+}
+.col-5-6{
+	display: inline;
+	grid-row-gap: 10px;
+}
+.col-1-3:hover {
+	transition: opacity 1s;
+  opacity: .6;
+}
+.col-4-2:hover{
+	transition: opacity 1s;
+  opacity: .6;
+}
+.col-5-6:hover{
+	transition: opacity 1s;
+  opacity: .6;
+}
+.img_1 {
+	margin: 20px;
+}
+.img_2 {
+	margin: 20px;
+}
+.img_3 {
+	margin: 20px;
+}
+.img_4 {
+	margin: 20px;
+}
+.img_5 {
+	margin: 20px;
+}
+.img_6 {
+	margin: 20px;
+}
+/* Need to play with spacing to get poper row gap */
+ /* Hover affects both images in Column since they are grouped together */
+
+
+/* Social Media Links */
+.fa {
+	padding: 20px;
+	font-size: 30px;
+	color: #7B98AA;
+}
+/* Footer */
+footer {
+		text-align: center;
+		background-color: #CDF3F6;
+		padding: 20px;
+}
+footer a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #44545E;
+}
+footer p {
+	margin: 10px 0px 0px 0px;
+}
+footer p a {
+	font-family: "Lato", sans-serif;
+}
+footer div {
+	text-align: center;
+	padding: 20px 0 20px 0;
+}
+
+#author {
+	text-transform: none;
+	color: #7B98AA;
+}
+hr {
+	border: 1px solid #44545E;
+}
+/* input {
+	text-align: center;
+	border-style: none;
+	border-spacing: 20px;
+	font-size: 16px;
+} */
+button {
+	background-color: #CDF3F6;
+	border-color: #7B98AA;
+	border-width: thin;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #708090;
+	padding: 2px 20px 2px 20px;
+}
+div input {
+	padding-left: 45px;
+	font-size: 11px;
+}
+
+/* Media Queries */
+
+/* From The Archice images - necessary for XL screens?*/
+/* @media screen and (max-width: 1950px) {
+    .issue_18 {
+			position: relative;
+			left: 100px;
+    }
+}
+@media screen and (max-width: 1950px) {
+    .issue_19 {
+			position: relative;
+			left: 100px;
+    }
+}
+@media screen and (max-width: 1950px) {
+    .issue_20 {
+			position: relative;
+			left: 100px;
+    }
+} */
+@media screen and (max-width: 1200px) {
+    article p {
+      margin: 10px;
+			text-align: center;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .container {
+      margin: 10px;
+			text-align: center;
+			grid-template-columns: repeat(3, 3fr);
+    }
+}
+@media screen and (max-width: 1000px) {
+    article p {
+      margin: 10px;
+			text-align: center;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .container {
+      margin: 5px;
+			text-align: center;
+			grid-template-columns: repeat(2, 2fr);
+    }
+}
+@media screen and (max-width: 960px) {
+    .imgcontainer { grid-template-columns: repeat(3, 3fr);
+    }
+}
+@media screen and (max-width: 800px) {
+    .imgcontainer {
+			grid-template-columns: repeat(2, 2fr);
+    }
+}
+@media screen and (max-width: 800px) {
+    article p {
+      margin: 10px;
+			text-align: center;
+    }
+}
+@media screen and (max-width: 600px) {
+		header {
+			text-align: center;
+		}
+}
+@media screen and (max-width: 600px) {
+    .container {
+      margin: 5px;
+			text-align: center;
+			display: grid;
+		  grid-column-gap: 20px;
+			grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 600px) {
+    .hamburger {
+      display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    nav a {
+      display: none;
+    }
+}
+@media screen and (max-width: 500px) {
+    .imgcontainer {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
