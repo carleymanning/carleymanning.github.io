@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
+* {
+  box-sizing: border-box; }
+
+/*Note: fix so that images will scale with their containers. We'll chat about this more when we cover responsive design*/
+body {
+  font-family: "Open Sans Condensed";
+  color: #373737; }
+
+nav {
+  margin: 25px 0 25px 0;
+  background: white;
+  width: 100%;
+  top: 0;
+  position: sticky;
+  z-index: 100;
+  position: center;
+  text-align: center; }
+
+nav a {
+  font-family: "Open Sans Condensed";
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #373737;
+  padding: 75px 20px 20px 75px; }
+
+nav a:hover {
+  color: #C0B238; }
+
+header {
+  display: block;
+  max-width: none;
+  text-align: center;
+  text-decoration: none;
+  font-family: Pacifico;
+  margin-bottom: 60px;
+  background-image: url(../images/GTO.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #DCD0C0;
+  padding: 30px 0;
+  color: #373737;
+  font-size: 30px; }
+  header a {
+    text-align: center;
+    text-decoration: none;
+    color: #373737; }
+
+header a:hover {
+  color: #A7B3A5; }
+
+header h1 {
+  color: #373737; }
+
+header h2 {
+  font-family: "Open Sans Condensed";
+  font-size: 20px; }
+
+header h3 {
+  font-size: 15px;
+  font-family: "Open Sans Condensed"; }
+
+header img {
+  max-width: 100%;
+  display: block;
+  position: absolute; }
+
+aside p {
+  text-align: left;
+  color: #373737;
+  font-size: 14px; }
+
+aside {
+  display: block; }
+  aside h3 {
+    font-family: "Open Sans Condensed";
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600; }
+  aside h4 {
+    font-family: "Open Sans Condensed";
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400; }
+
+aside img {
+  max-width: 100px;
+  display: block; }
+aside div {
+  position: center;
+  text-align: center;
+  font-size: 36px; }
+aside div a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #44545E; }
+
+.hamburger {
+  background-color: gray;
+  font-size: 27px;
+  padding: 10px 30px;
+  display: none; }
+
+.imgcontainer {
+  display: flex;
+  position: relative;
+  padding-bottom: 20px;
+  background-size: cover;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 20px;
+  justify-content: center; }
+
+.container {
+  display: grid;
+  grid-template-columns: 35% 35% 20%;
+  grid-row-gap: 10px;
+  grid-column-gap: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: #F4F4F4; }
+
+.blog_posts {
+  display: block;
+  text-align: left;
+  text-decoration: underline;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #44545E; }
+
+.read_more {
+  display: grid;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column-gap: 20px;
+  /* CSS Validator - Error for line above - not sure what I should have done differently */
+  text-align: center;
+  align-items: center;
+  background-color: white; }
+
+.read_more:hover {
+  transition: opacity 1s;
+  opacity: .15; }
+
+footer {
+  text-align: center;
+  text-decoration: none; }
+  footer a {
+    text-align: center;
+    text-decoration: none;
+    color: #373737; }
+
+/*# sourceMappingURL=style.css.map */

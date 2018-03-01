@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+* {
+	box-sizing: border-box;
+}
+
+// pale gold: #COB283
+// silk: #DCD0C0
+// paper: #F4F4F4
+// charcoal: #373737
+
+/*Note: fix so that images will scale with their containers. We'll chat about this more when we cover responsive design*/
+// variables
+$body-text-color: #373737;
+$background_color: #DCD0C0;
+$font_family: 'Open Sans Condensed';
+$hover: #C0B238;
+
+body {
+	font-family: $font_family;
+	color: $body-text-color;
+}
+//  NAV //
+nav {
+		margin: 25px 0 25px 0;
+		background: white;
+		width: 100%;
+		top: 0;
+		position: sticky;
+		z-index: 100;
+		position: center;
+		text-align: center;
+	}
+nav a {
+	font-family: $font_family;
+	font-weight: 600;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $body-text-color;
+	padding: 75px 20px 20px 75px;
+}
+nav a:hover {
+	color: $hover;
+}
+
+// HEADER //
+header {
+  display: block;
+	max-width: none;
+  text-align: center;
+	text-decoration: none;
+	font-family: Pacifico;
+	margin-bottom: 60px;
+  background-image: url(../images/GTO.JPG);
+  background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+  background-color: $background_color;
+  padding: 30px 0;
+	color: $body-text-color;
+	font-size: 30px;
+	a {
+		text-align: center;
+		text-decoration: none;
+		color: $body-text-color;
+	}
+}
+header a:hover {
+	color: #A7B3A5;
+}
+header h1 {
+	color: $body-text-color;
+	}
+header h2 {
+	font-family: $font-family;
+	font-size: 20px;
+}
+header h3 {
+	font-size: 15px;
+	font-family: $font_family;
+}
+header img {
+	max-width: 100%;
+	display: block;
+	position: absolute;
+}
+// ASIDE //
+aside p {
+	text-align: left;
+	color: $body-text-color;
+	font-size: 14px;
+}
+aside {
+  display: block;
+	h3 {
+	font-family: $font_family;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 600;
+}
+	h4 {
+	font-family: $font_family;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 400;
+}
+}
+aside {
+	img {
+	max-width: 100px;
+	display: block;
+	}
+	div {
+	position: center;
+	text-align: center;
+	font-size: 36px;
+	}
+	div a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #44545E;
+	}
+}
+// Classes //
+.hamburger {
+	background-color: gray;
+	font-size: 27px;
+	padding: 10px 30px;
+	 display: none;
+}
+.imgcontainer {
+	display: flex;
+	position: relative;
+	padding-bottom: 20px;
+	background-size: cover;
+	text-align: center;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding-bottom: 20px;
+	justify-content: center;
+}
+.container {
+	display: grid;
+	grid-template-columns: 35% 35% 20%;
+	grid-row-gap: 10px;
+	grid-column-gap: 40px;
+	margin-left: 100px;
+	margin-right: 100px;
+	background-color: #F4F4F4;
+}
+.blog_posts {
+	display: block;
+	text-align: left;
+	text-decoration: underline;
+	line-height: 25px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #44545E
+}
+.read_more {
+	display: grid;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+  grid-column-gap: 20px;
+	/* CSS Validator - Error for line above - not sure what I should have done differently */
+	text-align: center;
+	align-items: center;
+	background-color: white;
+}
+.read_more:hover {
+	transition: opacity 1s;
+  opacity: .15;
+}
+
+// IDs //
+// #masthead {
+// 	display: block;
+// 	background-color: #DCD0C0;
+// 	background-image: url(../images/GTO.JPG);
+// }
+// FOOTER//
+footer {
+	text-align: center;
+	text-decoration: none;
+	a {
+		text-align: center;
+		text-decoration: none;
+		color: $body-text-color;
+	}
+}
