@@ -2,6 +2,29 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
+// placeholder text
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #373737;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #373737;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #373737;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #373737;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #373737;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    #373737;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -12,7 +35,8 @@
 // charcoal: #373737
 
 /*Note: fix so that images will scale with their containers. We'll chat about this more when we cover responsive design*/
-// variables
+
+//**** variables ****//
 $body-text-color: #373737;
 $background_color: #DCD0C0;
 $font_family: 'Open Sans Condensed';
@@ -21,6 +45,7 @@ $hover: #C0B238;
 body {
 	font-family: $font_family;
 	color: $body-text-color;
+	// padding: 30px;
 }
 //  NAV //
 nav {
@@ -54,11 +79,11 @@ header {
 	text-decoration: none;
 	font-family: Pacifico;
 	margin-bottom: 60px;
-  background-image: url(../images/GTO.JPG);
+  background-image: url(../img/SJDPClouds.JPG);
   background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-  background-color: $background_color;
+  background-color: #F5F5F5;
   padding: 30px 0;
 	color: $body-text-color;
 	font-size: 30px;
@@ -77,96 +102,250 @@ header h1 {
 header h2 {
 	font-family: $font-family;
 	font-size: 20px;
+	color: $body-text-color;
 }
 header h3 {
 	font-size: 15px;
 	font-family: $font_family;
+	color: $body-text-color;
 }
-header img {
-	max-width: 100%;
-	display: block;
-	position: absolute;
-}
-// ASIDE //
+
+
+// Aside / About Us //
 aside p {
 	text-align: left;
 	color: $body-text-color;
 	font-size: 14px;
+	margin-left: 30px;
 }
-aside {
-  display: block;
+.aboutcontainer {
+	display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: #F4F4F4;
+  padding-left: 20px;
+  padding-right: 20px;
+	padding-bottom: 30px;
 	h3 {
-	font-family: $font_family;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 18px;
-	font-weight: 600;
-}
-	h4 {
-	font-family: $font_family;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: 400;
-}
-}
-aside {
+		font-family: $font_family;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 600;
+		padding-top: 20px;
+	}
+	h5 {
+		font-family: $font_family;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: 400;
+	}
 	img {
-	max-width: 100px;
-	display: block;
+		// max-width: 250px;
+		display: block;
+		position: relative;
+		align-items: right;
+		margin-left: 30px;
 	}
 	div {
-	position: center;
-	text-align: center;
-	font-size: 36px;
+		position: center;
+		text-align: center;
+		font-size: 20px;
 	}
 	div a {
-	text-decoration: none;
-	text-transform: uppercase;
-	color: #44545E;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #44545E;
+		padding-top: 20px;
+	}
+	p {
+		text-align: center;
+		font-size: 14px;
 	}
 }
+
+article div h4 {
+  font-family: $font_family;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+}
+ //**************** Form / Contact Us **************//
+form {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 5px;
+	margin: 30px auto;
+	max-width: 700px;
+	padding: 20px;
+	border-radius: 5px;
+}
+form h4 {
+	font-size: 20px;
+	letter-spacing: .09em;
+}
+input {
+	display: block;
+ 	// text-align: center;
+ 	// align: center;
+	width: 100%;
+ }
+input:focus {
+	border: 4px solid #C0B283;
+}
+textarea {
+	display: block;
+	height: 100px;
+	// border: 1px solid gray;
+	margin-left: 15%;
+  margin-right:15%;
+  width: 100%;
+	resize: none;
+ }
+textarea:focus {
+ 	border: 4px solid #C0B283;
+}
+body {
+  text-align: center;
+}
+
+button {
+  /* To remove the default border: */
+  border: none;
+  /* To add space inside button */
+  padding: 10px 18px;
+  /* To add a shadow behind button: */
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  /* To Round corners: */
+  border-radius: 4px;
+  /* To Transition hover effect: */
+  transition: all .15s ease;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: #fff;
+  background: #F4F4F4;
+}
+
+button:hover {
+  transform: translateY(-2px);
+	color: #C0B283;
+	background-color: #373737;
+}
+
+// // // // /// // /// ////// /////// / // //// /
+
 // Classes //
 .hamburger {
 	background-color: gray;
 	font-size: 27px;
 	padding: 10px 30px;
-	 display: none;
+	display: none;
 }
+
+.menu {
+  transform: translateY(0px);
+  transition: all 1s linear;
+  position: relative;
+  display: inline-block;
+}
+.menu-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.menu-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.menu-content a:hover {
+  background-color: gray;
+}
+
+// /////////////////////////////////
+
 .imgcontainer {
 	display: flex;
 	position: relative;
-	padding-bottom: 20px;
 	background-size: cover;
 	text-align: center;
 	margin-left: 100px;
 	margin-right: 100px;
-	padding-bottom: 20px;
+	padding-bottom: 50px;
 	justify-content: center;
 }
-.container {
+// figure out how to add text on top of featured images
+  // white background
+  // read more button
+// .featuredimg {
+// 	display: flex;
+// 	position: relative;
+// }
+// .text-block {
+// 	position: absolute;
+// 	bottom: 20px;
+// 	right: 20px;
+// 	background-color: white;
+// 	color: black;
+// 	padding-left: 20px;
+// 	padding-right: 20px
+// }
+.featured {
+	text-align: center;
+	text-decoration: underline;
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: .09em;
+	background-color: #F4F4F4;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.blogcontainer {
 	display: grid;
-	grid-template-columns: 35% 35% 20%;
-	grid-row-gap: 10px;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 40px;
 	margin-left: 100px;
 	margin-right: 100px;
 	background-color: #F4F4F4;
+	padding-left: 20px;
+	padding-right: 20px;
+	// display: table-cell;
+  // padding: 2.2em 3em 2em;
+  // width: 55%;
+  // // vertical-align: middle;
 }
-.blog_posts {
+
+
+.blogpost {
 	display: block;
-	text-align: left;
-	text-decoration: underline;
+	text-align: center;
 	line-height: 25px;
 	font-size: 14px;
 	font-weight: 400;
 	color: #44545E
+	// margin: auto;
+}
+
+.blogpost h4 {
+	text-decoration: underline;
 }
 .read_more {
 	display: grid;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 20px;
   grid-column-gap: 20px;
 	/* CSS Validator - Error for line above - not sure what I should have done differently */
 	text-align: center;
@@ -178,19 +357,90 @@ aside {
   opacity: .15;
 }
 
+.blogpost {
+	position: relative;
+
+}
+.baja {
+	margin: auto;
+}
+.guanajuato {
+	margin: auto;
+}
+.zipolite {
+	margin: auto;
+}
+
+.load {
+	/* To remove the default border: */
+	border: none;
+	/* To add space inside button */
+	padding: 10px 18px;
+	/* To add a shadow behind button: */
+	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	/* To Round corners: */
+	border-radius: 4px;
+	/* To Transition hover effect: */
+	transition: all .15s ease;
+	font-size: 15px;
+	text-transform: uppercase;
+	letter-spacing: .07em;
+	color: #fff;
+	background: #F4F4F4;
+}
+
+.fa {
+  padding-top: 20px;
+	font-size: 30px;
+	color: #7B98AA;
+}
+.bigger {
+  padding-top: 20px;
+	font-size: 60px;
+	color: #7B98AA;
+}
 // IDs //
 // #masthead {
 // 	display: block;
 // 	background-color: #DCD0C0;
 // 	background-image: url(../images/GTO.JPG);
 // }
+
+#myMenu {
+
+}
 // FOOTER//
-footer {
+footer p {
 	text-align: center;
 	text-decoration: none;
+	background-color: #DCD0C0;
+	padding: 20px 0 20px 0;
 	a {
 		text-align: center;
 		text-decoration: none;
 		color: $body-text-color;
 	}
+}
+// Media Queries //
+
+@media screen and (max-width: 950px) {
+    .aboutcontainer {
+			grid-template-columns: repeat(1, 1fr);
+      text-align: left;
+    }
+}
+@media screen and (max-width: 950px) {
+    div p {
+      text-align: center;
+    }
+}
+@media screen and (max-width: 600px) {
+    .hamburger {
+      display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    nav a {
+      display: none;
+    }
 }
